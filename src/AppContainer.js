@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
-import Heading from './components/Heading';
 import BenefitsContainer from './components/BenefitsContainer';
+import NavigationBar from './components/NavigationBar';
+import SideBar from './components/SideBar';
 
 
 class AppContainer extends Component {
   render() {
     return (
       <div className="AppContainer">
-        <Heading />
-        <BenefitsContainer />
+        <SideBar />
+        <NavigationBar />  
+        <div style={styles.pageArea}>      
+          <BenefitsContainer />
+        </div>
       </div>
     )
   }
 }
 
-export default AppContainer; 
+const styles = {
+  pageArea: {
+     width: '80%',
+  },
+}
+
+export default AppContainer;

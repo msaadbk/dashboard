@@ -10,7 +10,7 @@ class Heading extends Component {
 
     render() {
         return(
-            <div>
+            <div style={styles.container}>
               <h1>Membership status</h1>
               <div>
                 <h1>Basic</h1>
@@ -28,6 +28,12 @@ class Heading extends Component {
         
         )
     }
+}
+
+const styles = {
+  container: {
+    border: '1px solid',
+  }
 }
 
 export default Heading;

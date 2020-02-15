@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import BenefitsCard from './BenefitsCard'
+import BenefitsCard from './BenefitsCard';
+import Heading from './Heading';
 
 const demo = [
   {
@@ -30,13 +31,15 @@ class BenefitsContainer extends Component {
 
   render() {
     return (
-
       <div>
-        <h1 style={styles.heading}>Benefits</h1>
-        <BenefitsCard data={demo[0]} />
-        <BenefitsCard data={demo[1]} />
-        <BenefitsCard data={demo[2]} />
-        <input type="button" value="Upgrade now" />
+        <Heading /> 
+        <div style={styles.container}>        
+          <h1 style={styles.heading}>Benefits</h1>
+          <BenefitsCard styles={styles.BenefitsCard} data={demo[0]} />
+          <BenefitsCard styles={styles.BenefitsCard} data={demo[1]} />
+          <BenefitsCard styles={styles.BenefitsCard} data={demo[2]} />
+          <input type="button" value="Upgrade now" />
+        </div>
       </div>
 
     )
@@ -46,6 +49,12 @@ class BenefitsContainer extends Component {
 const styles = {
   heading: {
     color: 'blue',
+  },
+  card: {
+    float: 'left',
+  },
+  container: {
+    border: '1px solid',
   }
 
 }
