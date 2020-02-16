@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Heading extends Component {
+class BenefitsDesc extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -36,4 +36,4 @@ const styles = {
   }
 }
 
-export default Heading;
+export default BenefitsDesc;

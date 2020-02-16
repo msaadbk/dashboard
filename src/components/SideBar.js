@@ -22,7 +22,7 @@ const styles={
     width: '20%',
     position: 'absolute',
     right: '0px',
-    top: 100,
+    top: 150,
     height: '100%',
   }
 }

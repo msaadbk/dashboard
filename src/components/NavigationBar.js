@@ -10,7 +10,7 @@ class NavigationBar extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <p>{"Membership basic"}</p>
+        <p>{"Secondary Navigation Bar"}</p>
         <a href="">{"Benefits"}</a>
         <a href="">{"History"}</a>
         <a href="">{"Upgrade"}</a>
@@ -23,6 +23,7 @@ const styles = {
   container: {
     border: '1px solid',
     height: 100,
+    boxSizing: 'border-box',
   }
 }
 export default NavigationBar;
