@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MembershipCard from './MembershipCard';
 
 class MembershipContainer extends Component {
   constructor(props) {
@@ -11,12 +12,7 @@ class MembershipContainer extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <span>Here we will print:
-          1) A Heading
-          2) A paragraph
-          3) A small heading
-          4) 3 cards(these cards will have details in form of text and a button)
-        </span>
+        <MembershipCard data={plans[0]}/>
       </div>
     )
   }
@@ -27,5 +23,25 @@ const styles = {
     border: '1px solid',
   }
 }
+
+const plans = [
+  {
+    categ: 'Standard',
+    subscriptions:
+      [{ type: 'Annual plan, paid monthly', price: 1000, unit: '/mo' },
+      { type: 'Annual plan, paid quarterly', price: 2500, unit: '/6mo' }],
+    benefits: ['benefit1', 'benefit2', 'benefit3', 'benefit4', 'benefit5'],
+  },
+  {
+    categ: 'Enhanced',
+    subscriptions: [{ type: 'Annual plan, paid monthly', price: 1000, unit: '/mo' }, { type: 'Annual plan, paid quarterly', price: 2500, unit: '/6mo' }],
+    benefits: ['benefit1', 'benefit2', 'benefit3', 'benefit4', 'benefit5']
+  },
+  {
+    categ: 'Elite',
+    subscriptions: [{ type: 'Annual plan, paid monthly', price: 1000, unit: '/mo' }, { type: 'Annual plan, paid quarterly', price: 2500, unit: '/6mo' }],
+    benefits: ['benefit1', 'benefit2', 'benefit3', 'benefit4', 'benefit5']
+  },
+]
 
 export default MembershipContainer;
