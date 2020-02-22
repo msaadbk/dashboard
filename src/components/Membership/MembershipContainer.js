@@ -12,10 +12,16 @@ class MembershipContainer extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <MembershipCard data={plans[0]}/>
+      {
+        plans.map( (item)=> {
+            return <MembershipCard data={item} />
+        })
+      }
       </div>
     )
   }
+
+
 }
 
 const styles = {

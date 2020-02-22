@@ -7,7 +7,7 @@ class MembershipCard extends Component {
 
     }
   }
-
+  
   render() {
     return (
       <div style={styles.container}> 
