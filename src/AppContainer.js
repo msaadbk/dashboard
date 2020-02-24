@@ -14,8 +14,8 @@ class AppContainer extends Component {
         <NavigationBar />  
         <SideBar />
         <div style={styles.pageArea}>      
-          {/* <BenefitsContainer /> */}
-          <MembershipContainer />
+          <BenefitsContainer />
+          {/* <MembershipContainer /> */}
         </div>
       </div>
     )

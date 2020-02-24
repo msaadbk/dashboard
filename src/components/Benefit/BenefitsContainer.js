@@ -35,9 +35,15 @@ class BenefitsContainer extends Component {
         <BenefitsDesc /> 
         <div style={styles.container}>        
           <h1 style={styles.heading}>Benefits</h1>
-          <BenefitsCard styles={styles.card} data={demo[0]} />
+          {/* <BenefitsCard styles={styles.card} data={demo[0]} />
           <BenefitsCard styles={styles.card} data={demo[1]} />
-          <BenefitsCard styles={styles.BenefitsCard} data={demo[2]} />
+          <BenefitsCard styles={styles.BenefitsCard} data={demo[2]} /> */}
+          {
+        demo.map( (item)=> {
+            return <BenefitsCard data={item} />
+        })
+          }
+          
           <input type="button" value="Upgrade now" />
         </div>
       </div>
