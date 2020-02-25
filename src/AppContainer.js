@@ -4,6 +4,7 @@ import NavigationBar from './components/NavigationBar';
 import SideBar from './components/SideBar';
 import SiteHeader from './components/SiteHeader';
 import MembershipContainer from './components/Membership/MembershipContainer';
+import PaymentSettingsContainer from './components/PaymentSettings/PaymentSettingsContainer';
 
 
 class AppContainer extends Component {
@@ -14,8 +15,9 @@ class AppContainer extends Component {
         <NavigationBar />  
         <SideBar />
         <div style={styles.pageArea}>      
-          <BenefitsContainer />
+          {/* <BenefitsContainer /> */}
           {/* <MembershipContainer /> */}
+          <PaymentSettingsContainer />
         </div>
       </div>
     )
