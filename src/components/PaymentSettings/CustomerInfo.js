@@ -12,6 +12,7 @@ class CustomerInfo extends Component {
   render() {
     return(
       <div style={styles.container}>
+        <img style = {styles.image} src={"https://via.placeholder.com/150/92c952"}></img>
         <span>CustomerInfo</span>
         <br></br>
         <span>Member since {"date"}</span>
@@ -31,6 +32,12 @@ const styles = {
     width: 800,
     height: 220,
     border: '1px solid',
+  },
+
+  image: {
+    float: "left"
   }
 }
+
+
 export default CustomerInfo;

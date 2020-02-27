@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PaymentMethodCard from './PaymentMethodCard';
 
 class PaymentMethod extends Component{
   constructor(props){
@@ -11,7 +12,11 @@ class PaymentMethod extends Component{
   render() {
     return(
       <div style={styles.container}>
-        PaymentMethod. Need to put cards here
+        {
+        cardData.map( (item)=> {
+            return <PaymentMethodCard data={item} />
+        })
+      }
       </div>
     )
   }
@@ -24,7 +29,19 @@ const styles = {
     height: 220,
     border: '1px solid',
   }
-
 }
+
+const cardData= [
+  {
+    type:"Visa",
+    number:"xxx-xxxx-xxxx-xxx",
+    date:"dd/mm/yyy1",
+  },
+  {
+    type:"MasterCard",
+    number:"yyyy-yyyy-yyy",
+    date:"dd/mm/yyy2",
+  }
+]
 
 export default PaymentMethod;
